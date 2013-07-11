@@ -2,7 +2,8 @@
 
 var fs = require('fs'),
     program = require('commander'),
-    cheerio = require('cheerio');
+    cheerio = require('cheerio'),
+    rest = require('restler'),
     HTMLFILE_DEFAULT = "index.html",
     CHECKSFILE_DEFAULT = "checks.json";
 
