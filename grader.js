@@ -26,7 +26,7 @@ var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
-var checkHtmlFile = function($, checksfile) {
+var checkHtml = function($, checksfile) {
 
     var checks = loadChecks(checksfile).sort(),
         out = {};
@@ -54,7 +54,7 @@ if (require.main == module) {
 
 
     var checkString = function ($) {
-        var checkJson = checkHtmlFile($, program.checks),
+        var checkJson = checkHtml($, program.checks),
             outJson = JSON.stringify(checkJson, null, 4);
         console.log(outJson);
     };
